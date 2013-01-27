@@ -52,7 +52,7 @@ PRODUCT_COPY_FILES += \
 	device/xiaomi/aries/audio_policy.conf:system/etc/audio_policy.conf
 
 PRODUCT_COPY_FILES += \
-	device/xiaomi/aries/thermald-mako.conf:system/etc/thermald.conf
+	device/xiaomi/aries/thermald-aries.conf:system/etc/thermald.conf
 
 PRODUCT_COPY_FILES += \
 	device/xiaomi/aries/init.qcom.rc:root/init.qcom.rc \
