@@ -83,10 +83,6 @@ PRODUCT_COPY_FILES += \
 	device/xiaomi/aries/sensor00fn1a.kl:system/usr/keylayout/sensor00fn1a.kl \
 	device/xiaomi/aries/ue_rf4ce_remote.kl:system/usr/keylayout/ue_rf4ce_remote.kl
 
-# Prebuilt input device calibration files
-PRODUCT_COPY_FILES += \
-	device/xiaomi/aries/touch_dev.idc:system/usr/idc/touch_dev.idc
-
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
