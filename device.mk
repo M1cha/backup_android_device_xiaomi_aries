@@ -70,9 +70,6 @@ PRODUCT_COPY_FILES += \
 	device/xiaomi/aries/media_profiles.xml:system/etc/media_profiles.xml \
 	device/xiaomi/aries/media_codecs.xml:system/etc/media_codecs.xml
 
-PRODUCT_COPY_FILES += \
-	device/xiaomi/aries/kickstart_checker.sh:system/etc/kickstart_checker.sh
-
 # Prebuilt kl and kcm keymaps
 PRODUCT_COPY_FILES += \
 	device/xiaomi/aries/atmel_mxt_ts.kl:system/usr/keylayout/atmel_mxt_ts.kl \
