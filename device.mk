@@ -48,7 +48,10 @@ PRODUCT_COPY_FILES += \
 	device/xiaomi/aries/WCNSS_qcom_wlan_nv.bin:system/etc/wifi/WCNSS_qcom_wlan_nv.bin
 
 PRODUCT_COPY_FILES += \
+	device/xiaomi/aries/snd_soc_msm:system/etc/snd_soc_msm/snd_soc_msm \
+	device/xiaomi/aries/snd_soc_msm_2x:system/etc/snd_soc_msm/snd_soc_msm_2x \
 	device/xiaomi/aries/snd_soc_msm_2x_Fusion3:system/etc/snd_soc_msm/snd_soc_msm_2x_Fusion3 \
+	device/xiaomi/aries/snd_soc_msm_Sitar:system/etc/snd_soc_msm/snd_soc_msm_Sitar \
 	device/xiaomi/aries/audio_policy.conf:system/etc/audio_policy.conf
 
 PRODUCT_COPY_FILES += \
