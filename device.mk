@@ -55,10 +55,15 @@ PRODUCT_COPY_FILES += \
 	device/xiaomi/aries/thermald-mako.conf:system/etc/thermald.conf
 
 PRODUCT_COPY_FILES += \
-	device/xiaomi/aries/init.mako.rc:root/init.mako.rc \
-	device/xiaomi/aries/init.mako.usb.rc:root/init.mako.usb.rc \
+	device/xiaomi/aries/init.qcom.rc:root/init.qcom.rc \
+	device/xiaomi/aries/init.qcom.sh:root/init.qcom.sh \
+	device/xiaomi/aries/init.qcom.usb.rc:root/init.qcom.usb.rc \
+	device/xiaomi/aries/init.qcom.usb.sh:root/init.qcom.usb.sh \
+	device/xiaomi/aries/init.target.rc:root/init.target.rc \
+	device/xiaomi/aries/init.qcom.class_core.sh:root/init.qcom.class_core.sh \
+	device/xiaomi/aries/init.qcom.class_main.sh:root/init.qcom.class_main.sh \
 	device/xiaomi/aries/fstab.mako:root/fstab.mako \
-	device/xiaomi/aries/ueventd.mako.rc:root/ueventd.mako.rc \
+	device/xiaomi/aries/ueventd.qcom.rc:root/ueventd.qcom.rc \
 	device/xiaomi/aries/media_profiles.xml:system/etc/media_profiles.xml \
 	device/xiaomi/aries/media_codecs.xml:system/etc/media_codecs.xml
 
@@ -160,9 +165,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
 	power.msm8960
-
-PRODUCT_COPY_FILES += \
-	device/xiaomi/aries/init.mako.bt.sh:system/etc/init.mako.bt.sh
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.qualcomm.bt.hci_transport=smd
