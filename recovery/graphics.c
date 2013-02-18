@@ -27,6 +27,7 @@
 
 #include <linux/fb.h>
 #include <linux/kd.h>
+#include <linux/msm_mdp.h>
 
 #include <pixelflinger/pixelflinger.h>
 
@@ -71,6 +72,36 @@ static int gr_vt_fd = -1;
 
 static struct fb_var_screeninfo vi;
 static struct fb_fix_screeninfo fi;
+
+static int
+write_int(char const* path, int value)
+{
+    int fd;
+    static int already_warned = 0;
+
+    fd = open(path, O_RDWR);
+    if (fd >= 0) {
+        char buffer[20];
+        int bytes = sprintf(buffer, "%d\n", value);
+        int amt = write(fd, buffer, bytes);
+        close(fd);
+        return amt == -1 ? -1 : 0;
+    } else {
+        if (already_warned == 0) {
+            printf("write_int failed to open %s\n", path);
+            already_warned = 1;
+        }
+        return -1;
+    }
+}
+
+static int
+set_light_backlight(int brightness)
+{
+    int err = 0;
+    err = write_int("/sys/class/leds/lcd-backlight/brightness", brightness);
+    return err;
+}
 
 static int get_framebuffer(GGLSurface *fb)
 {
@@ -176,6 +207,12 @@ static void get_memory_surface(GGLSurface* ms) {
 static void set_active_framebuffer(unsigned n)
 {
     if (n > 1 || !double_buffering) return;
+
+    int enabled = 1;
+    if(ioctl(gr_fb_fd, MSMFB_OVERLAY_VSYNC_CTRL, &enabled)<0) {
+        perror("Enable vsync failed");
+    }
+
     vi.yres_virtual = vi.yres * NUM_BUFFERS;
     vi.yoffset = n * vi.yres;
     vi.bits_per_pixel = PIXEL_SIZE * 8;
@@ -372,6 +409,7 @@ int gr_init(void)
 
     gr_fb_blank(true);
     gr_fb_blank(false);
+    set_light_backlight(40);
 
     return 0;
 }
