@@ -77,6 +77,7 @@ TARGET_RECOVERY_UI_LIB := librecovery_ui_aries
 BOARD_CUSTOM_GRAPHICS := ../../../device/xiaomi/aries/recovery/graphics.c
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/xiaomi/aries/recovery/recovery_keys.c
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
+TARGET_RECOVERY_INITRC := device/xiaomi/aries/init.recovery.rc
 
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 23068672 # 22M

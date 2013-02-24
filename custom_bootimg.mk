@@ -55,3 +55,13 @@ $(INSTALLED_RECOVERYIMAGE_TARGET): $(MKBOOTIMG) \
 	$(hide) $(MKBOOTIMG) $(INTERNAL_RECOVERYIMAGE_ARGS) $(BOARD_MKBOOTIMG_ARGS) --output $@
 	$(hide) $(call assert-max-image-size,$@,$(BOARD_RECOVERYIMAGE_PARTITION_SIZE),raw)
 	@echo -e ${CL_CYN}"Made custom recovery image: $@"${CL_RST}
+
+$(recovery_uncompressed_ramdisk): $(MINIGZIP) \
+	$(TARGET_RECOVERY_ROOT_TIMESTAMP)
+	@echo -e ${CL_CYN}"----- Copying kernel modules to recovery ramdisk ------"${CL_RST}
+	$(hide) mkdir -p $(TARGET_RECOVERY_ROOT_OUT)/lib/modules
+	$(ACP) $(OUT)/system/lib/modules/symsearch.ko $(TARGET_RECOVERY_ROOT_OUT)/lib/modules/
+	$(ACP) $(OUT)/system/lib/modules/disableversioncheck.ko $(TARGET_RECOVERY_ROOT_OUT)/lib/modules/
+	@echo -e ${CL_CYN}"----- Making uncompressed recovery ramdisk ------"${CL_RST}
+	$(MKBOOTFS) $(TARGET_RECOVERY_ROOT_OUT) > $@
+
