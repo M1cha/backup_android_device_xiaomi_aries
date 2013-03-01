@@ -125,6 +125,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     gsm.operator.iso-country = us \
     ro.carrier=Sprint
 
+# mount script
+PRODUCT_COPY_FILES += \
+    device/xiaomi/aries/prebuilt/mount_ext4.sh:/system/bin/mount_ext4.sh
+
 # We have enough space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
 
