@@ -33,13 +33,6 @@ PRODUCT_COPY_FILES += \
     device/xiaomi/aries/ramdisk/fstab.qcom:root/fstab.qcom \
     device/xiaomi/aries/ramdisk/ueventd.qcom.rc:root/ueventd.qcom.rc
 
-# recovery and custom charging
-PRODUCT_COPY_FILES += \
-    device/xiaomi/aries/recovery/sbin/choice_fn:recovery/root/sbin/choice_fn \
-    device/xiaomi/aries/recovery/sbin/power_test:recovery/root/sbin/power_test \
-    device/xiaomi/aries/recovery/sbin/offmode_charging:recovery/root/sbin/offmode_charging \
-    device/xiaomi/aries/recovery/sbin/detect_key:recovery/root/sbin/detect_key
-
 # HTC BT audio config
 PRODUCT_COPY_FILES += device/xiaomi/aries/configs/AudioBTID.csv:system/etc/AudioBTID.csv
 
