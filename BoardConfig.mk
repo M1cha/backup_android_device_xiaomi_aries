@@ -25,10 +25,10 @@
 # against the traditional rules of inheritance).
 
 # inherit from common msm8960
--include device/htc/msm8960-common/BoardConfigCommon.mk
+-include device/xiaomi/msm8960-common/BoardConfigCommon.mk
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := jewel
+TARGET_BOOTLOADER_BOARD_NAME := MSM8960
 
 # Kernel
 BOARD_KERNEL_CMDLINE :=  console=ttyHSL0,115200,n8 androidboot.hardware=jet
@@ -36,9 +36,9 @@ BOARD_KERNEL_BASE :=  0x80400000
 BOARD_FORCE_RAMDISK_ADDRESS := 0x81800000
 BOARD_KERNEL_PAGESIZE := 4096
 
-TARGET_PREBUILT_KERNEL := device/htc/jewel/prebuilt/kernel
-TARGET_KERNEL_CONFIG := jet_defconfig
-TARGET_KERNEL_SOURCE := kernel/htc/msm8960
+TARGET_PREBUILT_KERNEL := device/xiaomi/aries/prebuilt/kernel
+TARGET_KERNEL_CONFIG := aries_defconfig
+TARGET_KERNEL_SOURCE := kernel/xiaomi/aries
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1280

@@ -1,5 +1,5 @@
-VENDOR=htc
-DEVICE=jewel
+VENDOR=xiaomi
+DEVICE=aries
 OUTDIR=vendor/$VENDOR/$DEVICE
 MAKEFILE=../../../$OUTDIR/$DEVICE-vendor-blobs.mk
 

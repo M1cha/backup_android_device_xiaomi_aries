@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/jewel.mk
+    $(LOCAL_DIR)/aries.mk
