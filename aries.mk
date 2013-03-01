@@ -62,19 +62,16 @@ PRODUCT_COPY_FILES += \
 
 # Keylayouts and Keychars
 PRODUCT_COPY_FILES += \
-    device/xiaomi/aries/keylayout/synaptics-rmi-touchscreen.kl:system/usr/keylayout/synaptics-rmi-touchscreen.kl \
-    device/xiaomi/aries/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
-    device/xiaomi/aries/keylayout/dummy_keypad.kl:system/usr/keylayout/dummy_keypad.kl \
-    device/xiaomi/aries/keylayout/Generic.kl:system/usr/keylayout/Generic.kl \
-    device/xiaomi/aries/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
+    device/xiaomi/aries/keylayout/atmel_mxt_ts.kl:system/usr/keylayout/atmel_mxt_ts.kl \
+    device/xiaomi/aries/keylayout/Button_Jack.kl:system/usr/keylayout/Button_Jack.kl \
+    device/xiaomi/aries/keylayout/cyttsp-i2c.kl:system/usr/keylayout/cyttsp-i2c.kl \
+    device/xiaomi/aries/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
     device/xiaomi/aries/keylayout/keypad_8960.kl:system/usr/keylayout/keypad_8960.kl \
-    device/xiaomi/aries/keylayout/msm8960-snd-card_Button_Jack.kl:system/usr/keylayout/msm8960-snd-card_Button_Jack.kl \
-    device/xiaomi/aries/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl
-
-# Input device config
-PRODUCT_COPY_FILES += \
-    device/xiaomi/aries/idc/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc \
-    device/xiaomi/aries/idc/projector_input.idc:system/usr/idc/projector_input.idc
+    device/xiaomi/aries/keylayout/keypad_8960_liquid.kl:system/usr/keylayout/keypad_8960_liquid.kl \
+    device/xiaomi/aries/keylayout/philips_remote_ir.kl:system/usr/keylayout/philips_remote_ir.kl \
+    device/xiaomi/aries/keylayout/samsung_remote_ir.kl:system/usr/keylayout/samsung_remote_ir.kl \
+    device/xiaomi/aries/keylayout/sensor00fn1a.kl:system/usr/keylayout/sensor00fn1a.kl \
+    device/xiaomi/aries/keylayout/ue_rf4ce_remote.kl:system/usr/keylayout/ue_rf4ce_remote.kl
 
 # NFCEE access control
 ifeq ($(TARGET_BUILD_VARIANT),user)
