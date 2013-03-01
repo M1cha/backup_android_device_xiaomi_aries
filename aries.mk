@@ -23,10 +23,15 @@ DEVICE_PACKAGE_OVERLAYS += device/xiaomi/aries/overlay
 
 # Boot ramdisk setup
 PRODUCT_COPY_FILES += \
-    device/xiaomi/aries/ramdisk/init.jet.rc:root/init.jet.rc \
-    device/xiaomi/aries/ramdisk/init.jet.usb.rc:root/init.jet.usb.rc \
-    device/xiaomi/aries/ramdisk/ueventd.jet.rc:root/ueventd.jet.rc \
-    device/xiaomi/aries/ramdisk/fstab.jet:root/fstab.jet
+    device/xiaomi/aries/ramdisk/init.qcom.rc:root/init.qcom.rc \
+    device/xiaomi/aries/ramdisk/init.qcom.sh:root/init.qcom.sh \
+    device/xiaomi/aries/ramdisk/init.qcom.usb.rc:root/init.qcom.usb.rc \
+    device/xiaomi/aries/ramdisk/init.qcom.usb.sh:root/init.qcom.usb.sh \
+    device/xiaomi/aries/ramdisk/init.target.rc:root/init.target.rc \
+    device/xiaomi/aries/ramdisk/init.qcom.class_core.sh:root/init.qcom.class_core.sh \
+    device/xiaomi/aries/ramdisk/init.qcom.class_main.sh:root/init.qcom.class_main.sh \
+    device/xiaomi/aries/ramdisk/fstab.qcom:root/fstab.qcom \
+    device/xiaomi/aries/ramdisk/ueventd.qcom.rc:root/ueventd.qcom.rc
 
 # recovery and custom charging
 PRODUCT_COPY_FILES += \
