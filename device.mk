@@ -225,4 +225,7 @@ PRODUCT_COPY_FILES += \
 	system/extras/bugmailer/bugmailer.sh:system/bin/bugmailer.sh \
 	system/extras/bugmailer/send_bug:system/bin/send_bug
 
+PRODUCT_COPY_FILES += \
+	device/xiaomi/aries/mount_ext4.sh:system/bin/mount_ext4.sh
+
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
