@@ -38,6 +38,7 @@ BOARD_KERNEL_BASE := 0x80200000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom ehci-hcd.park=3
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01600000
+BOARD_CUSTOM_KERNEL_MK := device/xiaomi/aries/kernel.mk
 
 # Try to build the kernel
 TARGET_KERNEL_CONFIG := aries_defconfig
