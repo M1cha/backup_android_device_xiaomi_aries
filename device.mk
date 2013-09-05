@@ -105,27 +105,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	device/xiaomi/aries/gps.conf:system/etc/gps.conf
 
-# NFC packages
-PRODUCT_PACKAGES += \
-    nfc_nci.aries \
-    NfcNci \
-    Tag \
-    com.android.nfc_extras
-
-# NFCEE access control
-ifeq ($(TARGET_BUILD_VARIANT),user)
-    NFCEE_ACCESS_PATH := device/xiaomi/aries/nfc/nfcee_access.xml
-else
-    NFCEE_ACCESS_PATH := device/xiaomi/aries/nfc/nfcee_access_debug.xml
-endif
-
-# NFC access control + feature files + configuration
-PRODUCT_COPY_FILES += \
-    $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml \
-    frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
-    frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml \
-    device/xiaomi/aries/nfc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf
-
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.opengles.version=196608
 
