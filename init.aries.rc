@@ -85,6 +85,10 @@ on boot
     # Start rmnet_usb driver
     write /sys/module/rmnet_usb/parameters/rmnet_data_init 1
 
+    # allow setting mac address
+    chmod 0660 /sys/devices/platform/primaconfig/mac_address
+    chown radio radio /sys/devices/platform/primaconfig/mac_address
+
     # Allow QMUX daemon to assign port open wait time
     chown radio radio /sys/devices/virtual/hsicctl/hsicctl0/modem_wait
 
@@ -441,6 +445,12 @@ service bdAddrLoader /system/bin/bdAddrLoader -f /persist/bluetooth/.bdaddr -h -
     class main
     user bluetooth
     group system bluetooth
+    oneshot
+
+service wifiAddrLoader /system/bin/wifiAddrLoader
+    class main
+	user radio
+    group radio
     oneshot
 
 # bugreport is triggered by holding down volume down, volume up and power
