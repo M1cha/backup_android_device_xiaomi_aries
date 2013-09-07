@@ -215,6 +215,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	libril
 
+PRODUCT_PACKAGES += \
+	dualboot_init
+
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	rild.libpath=/system/lib/libril-qc-qmi-1.so
 
