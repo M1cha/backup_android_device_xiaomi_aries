@@ -44,3 +44,4 @@
 /dev/efs_bridge           0660   system     system
 /dev/audience_es310       0660   system     audio
 /dev/ttyHS2               0660   system     audio
+/dev/radio0               0644   system     system
