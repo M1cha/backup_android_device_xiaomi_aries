@@ -23,7 +23,7 @@
 # *not* include it on all devices, so it is safe even with hardware-specific
 # components.
 
-ifneq ($(filter mako occam,$(TARGET_DEVICE)),)
+ifneq ($(filter aries aries,$(TARGET_DEVICE)),)
 
 LOCAL_PATH := $(call my-dir)
 
@@ -47,7 +47,7 @@ endif
 
 include $(call first-makefiles-under,$(LOCAL_PATH))
 
-ifeq ($(TARGET_DEVICE),mako)
+ifeq ($(TARGET_DEVICE),aries)
 
 # This is ugly for more reasons than I can mention. Don't think
 # that this is a good idea. It's not. It's horrible. It's truly
